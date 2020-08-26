@@ -22,5 +22,5 @@
 
  The CLOCK always is XCK=SCK=D4. We do NOT have an SS line, as USART only support master mode.
 
- You can NOT use the Serial in parallel using SPI_UART, but you may switch between using Serial.begin+Serial.end and SPI_UART.begin/SPI_UART.end
+ You can NOT use the Serial in parallel using SPI_UART, but you may switch between using Serial.begin+Serial.end and SPI_UART.begin/SPI_UART.end, **if you are on LGT8F with alternate pin sets**.
 
