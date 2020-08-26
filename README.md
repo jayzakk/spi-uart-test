@@ -1,5 +1,5 @@
-# SPI UART for ATmega328p and clones
- Fast SPI-UART for Arduino/Nano (ATmega328p) and special support for LGT8F MCU
+# SPI USART for ATmega328p and clones
+ Fast SPI-USART (SPI-UART) for Arduino/Nano (ATmega328p) and special support for LGT8F MCU
 
 
  Very fast replacement for SPI.h using the USART as SPI.
