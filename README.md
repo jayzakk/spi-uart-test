@@ -8,7 +8,7 @@
 
  Special support for LGT8F MCUs: Allows remapping RXD/TXD (MISO/MOSI) from pins D0/D1 to D5/D6 for "parallel" usage of serial interface, SPI and USART SPI on different pins. Playing with the big ones ^^ 
 
- Now, if all those libraries in the wild would ever think of not using a *hardcoded* "SPI.". There are even MCUs with 2 and more hardware SPI out there...
+ Now, if all those libraries in the wild would ever think of not using a *hardcoded* `SPI.`. There are even MCUs with 2 and more hardware SPI out there...
 
  Please read SPI_UART.h
 
