@@ -32,16 +32,23 @@ void SPIUARTClass::begin()
       PMX0 |= 1 << WCE;
       PMX0 |= _BV(TXD6) | _BV(RXD5);
     } else
-#endif
     {
       fastioMode(D0, INPUT_PULLUP);
       fastioMode(D1, OUTPUT);
       PMX0 |= 1 << WCE;
       PMX0 &= ~(_BV(TXD6) | _BV(RXD5) );
+#else
+    {
+      pinMode(0, INPUT_PULLUP);
+      pinMode(1, OUTPUT);
+#endif
     }
 
+#ifdef __LGT8F__
     fastioMode(D4, OUTPUT); // XCK
-
+#else
+    pinMode(4, OUTPUT); // XCK
+#endif
     UBRR0 = 0;
     UCSR0C |= _BV(UMSEL01) | _BV(UMSEL00);
     UCSR0B = _BV(RXEN0) | _BV(TXEN0);
