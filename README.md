@@ -4,7 +4,7 @@
 
  Very fast replacement for SPI.h using the USART as SPI.
 
- This code can keep up a *constant SPI clock* without interruptions at fastest (half of system) clock (16MHz MCU = 8MHz SPI, 32MHz MCU = 16MHz SPI) in its `transfer(buffer[,buffer],count)` functions. The default SPI libraries are not capable of this, as the USART has a ONE byte buffer, the ATmega328p-SPI has none. With this single byte buffer you get much faster transfers using SPI_UART. Though the code was written with the LGT8F in mind, it now also works on the "slower" (more cpu cycles per instruction) 328p.
+ This code can keep up a **constant SPI clock** without interruptions at fastest (half of system) clock (16MHz MCU = 8MHz SPI, 32MHz MCU = 16MHz SPI) in its `transfer(buffer[,buffer],count)` functions. The default SPI libraries are not capable of this, as the USART has a *ONE* byte buffer, the ATmega328p-SPI has none. With this single byte buffer you get much faster transfers using SPI_UART. Though the code was written with the LGT8F in mind, it now also works on the "slower" (more cpu cycles per instruction) 328p.
 
  Special support for LGT8F MCUs: Allows remapping RXD/TXD (MISO/MOSI) from pins D0/D1 to D5/D6 for "parallel" usage of serial interface, SPI and USART SPI on different pins. Playing with the big ones ^^ 
 
