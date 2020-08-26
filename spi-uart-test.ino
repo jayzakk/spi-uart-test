@@ -5,14 +5,17 @@ char buffer[3];
 SPISettings spisettings = SPISettings(16000000, MSBFIRST, SPI_MODE0);
 
 void setup() {
+#ifdef __LGT8F__
   // we use the alternate pins D5 and D6, because we also want to use the Serial for debugging
   SPI_UART.useAlternatePins = true;
+#endif  
 
   buffer[0] = 0x55;
   buffer[1] = 0;
 }
 
 
+// THIS loop only makes sense on LGT8F with remapped pins ;)
 void loop() {
 
   buffer[2]++;
